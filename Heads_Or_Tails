@@ -1,0 +1,22 @@
+import random
+
+while True:
+    user_choice = input("\nHeads or Tails? (h/t) or type 'q' to quit: ").strip().lower()
+
+    if user_choice == 'q':
+        print("Thanks for playing! Goodbye.")
+        break
+
+    if user_choice not in ['h', 't']:
+        print("Invalid choice. Please enter 'h' for Heads, 't' for Tails, or 'q' to quit.")
+        continue
+
+    computer_choice = random.choice(['h', 't'])
+    print(f"Computer chose: {'Heads' if computer_choice == 'h' else 'Tails'}")
+
+    if user_choice == computer_choice:
+        print("You win! 🎉")
+    else:
+        print("You lose! 😢")
+
+    print("\nLet's play again or type 'q' to quit.")
